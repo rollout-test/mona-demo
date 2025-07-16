@@ -13,5 +13,23 @@ jobs:
       - name: 'Dependency Review'
         uses: actions/dependency-review-action@v4
         with:
-          show-openssf-scorecard: true
-          
+        # All options below are optional. Default Values provided.
+         fail-on-severity: low # fail on vulnerabilities of this severity or higher
+         allow-licenses: "" # allowed SPDX licenses
+         deny-licenses: "" # denied SPDX licenses
+         fail-on-scopes: runtime # build environments to check
+         allow-ghsas: "" # skip these GitHub Advisory IDs
+         license-check: true # enable license check
+         vulnerability-check: true # enable vulnerability check
+         allow-dependencies-licenses: "" # exclude these packages from license checks
+         base-ref: "" # custom git base ref (non-PR events)
+         head-ref: "" # custom git head ref (non-PR events)
+         comment-summary-in-pr: never # PR comment summary mode
+         deny-packages: "" # block these packages in PR
+         deny-groups: "" # block these groups/namespaces in PR
+         retry-on-snapshot-warnings: false # retry on snapshot warnings
+         retry-on-snapshot-warnings-timeout: 120 # max retry time (seconds)
+         warn-only: false # log vulnerabilities as warnings only
+         show-openssf-scorecard: true # output OpenSSF Scorecard info
+         warn-on-openssf-scorecard-level: 3 # OpenSSF Scorecard warning threshold
+    
