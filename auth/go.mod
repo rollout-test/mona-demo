@@ -21,6 +21,7 @@ require (
 	golang.org/x/oauth2 v0.11.0
 	golang.org/x/text v0.12.0
 	gopkg.in/square/go-jose.v2 v2.6.0
+        github.com/go-acme/lego
 )
 
 require (

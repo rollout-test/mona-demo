@@ -6,7 +6,8 @@ const store = createStore({
       state: () => ({
         token: localStorage.getItem("token") || '',
         nonce: null,
-        gallery: null
+        gallery: null,
+        random: null
       }),
       mutations: {
         token(state, token) {
